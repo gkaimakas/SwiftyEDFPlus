@@ -8,10 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		014C61F76A5D8437DAA6E0DD /* Pods_SwiftyEDFPlus_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D609B4760AB7D01AB95E36C /* Pods_SwiftyEDFPlus_Tests.framework */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		136030301D0AFC78000B806E /* DateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1360302C1D0AFC78000B806E /* DateSpec.swift */; };
+		136030311D0AFC78000B806E /* PatientIdentificationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1360302D1D0AFC78000B806E /* PatientIdentificationSpec.swift */; };
+		136030321D0AFC78000B806E /* RecordingIdentificationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1360302E1D0AFC78000B806E /* RecordingIdentificationSpec.swift */; };
+		136030331D0AFC78000B806E /* StartDateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1360302F1D0AFC78000B806E /* StartDateSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1360302C1D0AFC78000B806E /* DateSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateSpec.swift; sourceTree = "<group>"; };
+		1360302D1D0AFC78000B806E /* PatientIdentificationSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientIdentificationSpec.swift; sourceTree = "<group>"; };
+		1360302E1D0AFC78000B806E /* RecordingIdentificationSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingIdentificationSpec.swift; sourceTree = "<group>"; };
+		1360302F1D0AFC78000B806E /* StartDateSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartDateSpec.swift; sourceTree = "<group>"; };
 		1423B303AEA00CF3342FBA83 /* SwiftyEDFPlus.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftyEDFPlus.podspec; path = ../SwiftyEDFPlus.podspec; sourceTree = "<group>"; };
 		2D609B4760AB7D01AB95E36C /* Pods_SwiftyEDFPlus_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyEDFPlus_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D8ECC26836705A0CEA542E6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -20,7 +27,6 @@
 		48F1EDD61E98CA5E0B4FF9D4 /* Pods-SwiftyEDFPlus_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyEDFPlus_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyEDFPlus_Tests/Pods-SwiftyEDFPlus_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* SwiftyEDFPlus_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyEDFPlus_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +63,10 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				1360302C1D0AFC78000B806E /* DateSpec.swift */,
+				1360302D1D0AFC78000B806E /* PatientIdentificationSpec.swift */,
+				1360302E1D0AFC78000B806E /* RecordingIdentificationSpec.swift */,
+				1360302F1D0AFC78000B806E /* StartDateSpec.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -218,7 +227,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				136030301D0AFC78000B806E /* DateSpec.swift in Sources */,
+				136030321D0AFC78000B806E /* RecordingIdentificationSpec.swift in Sources */,
+				136030311D0AFC78000B806E /* PatientIdentificationSpec.swift in Sources */,
+				136030331D0AFC78000B806E /* StartDateSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
