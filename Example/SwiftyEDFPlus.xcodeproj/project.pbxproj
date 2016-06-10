@@ -13,6 +13,7 @@
 		136030321D0AFC78000B806E /* RecordingIdentificationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1360302E1D0AFC78000B806E /* RecordingIdentificationSpec.swift */; };
 		136030331D0AFC78000B806E /* StartDateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1360302F1D0AFC78000B806E /* StartDateSpec.swift */; };
 		136030371D0AFF20000B806E /* StartTimeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136030361D0AFF20000B806E /* StartTimeSpec.swift */; };
+		136030411D0B2043000B806E /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136030401D0B2043000B806E /* StringExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		1360302E1D0AFC78000B806E /* RecordingIdentificationSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingIdentificationSpec.swift; sourceTree = "<group>"; };
 		1360302F1D0AFC78000B806E /* StartDateSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartDateSpec.swift; sourceTree = "<group>"; };
 		136030361D0AFF20000B806E /* StartTimeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartTimeSpec.swift; sourceTree = "<group>"; };
+		136030401D0B2043000B806E /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		1423B303AEA00CF3342FBA83 /* SwiftyEDFPlus.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftyEDFPlus.podspec; path = ../SwiftyEDFPlus.podspec; sourceTree = "<group>"; };
 		2D609B4760AB7D01AB95E36C /* Pods_SwiftyEDFPlus_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyEDFPlus_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D8ECC26836705A0CEA542E6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -69,8 +71,9 @@
 				1360302D1D0AFC78000B806E /* PatientIdentificationSpec.swift */,
 				1360302E1D0AFC78000B806E /* RecordingIdentificationSpec.swift */,
 				1360302F1D0AFC78000B806E /* StartDateSpec.swift */,
-				607FACE91AFB9204008FA782 /* Supporting Files */,
 				136030361D0AFF20000B806E /* StartTimeSpec.swift */,
+				607FACE91AFB9204008FA782 /* Supporting Files */,
+				136030401D0B2043000B806E /* StringExtensions.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				136030411D0B2043000B806E /* StringExtensions.swift in Sources */,
 				136030301D0AFC78000B806E /* DateSpec.swift in Sources */,
 				136030321D0AFC78000B806E /* RecordingIdentificationSpec.swift in Sources */,
 				136030311D0AFC78000B806E /* PatientIdentificationSpec.swift in Sources */,
