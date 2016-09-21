@@ -14,7 +14,7 @@ public struct RecordingIdentification {
 	public static let SpaceReplacement = "_"
 	public static let Prefix = "Startdate"
 	
-	public class Builder {
+	open class Builder {
 		
 		var startDate: Date? = nil
 		var hospitalAdministrationCode: String? = nil
@@ -25,34 +25,34 @@ public struct RecordingIdentification {
 		public init() {
 		}
 		
-		public func setStartDate(date: Date?) -> Builder {
+		open func setStartDate(_ date: Date?) -> Builder {
 			self.startDate = date
 			return self
 		}
 		
-		public func setHospitalAdministrationCode(code: String) -> Builder {
-			self.hospitalAdministrationCode = code.stringByReplacingOccurrencesOfString(" ", withString: RecordingIdentification.SpaceReplacement)
+		open func setHospitalAdministrationCode(_ code: String) -> Builder {
+			self.hospitalAdministrationCode = code.replacingOccurrences(of: " ", with: RecordingIdentification.SpaceReplacement)
 			return self
 		}
 		
-		public func setResponsibleParty(party: String) -> Builder {
-			self.responsibleParty = party.stringByReplacingOccurrencesOfString(" ", withString: RecordingIdentification.SpaceReplacement)
+		open func setResponsibleParty(_ party: String) -> Builder {
+			self.responsibleParty = party.replacingOccurrences(of: " ", with: RecordingIdentification.SpaceReplacement)
 			return self
 		}
 		
-		public func setUsedEquipment(equipment: String) -> Builder {
-			self.usedEquipment = equipment.stringByReplacingOccurrencesOfString(" ", withString: RecordingIdentification.SpaceReplacement)
+		open func setUsedEquipment(_ equipment: String) -> Builder {
+			self.usedEquipment = equipment.replacingOccurrences(of: " ", with: RecordingIdentification.SpaceReplacement)
 			return self
 		}
 		
-		public func setExtraField(field: String) -> Builder {
+		open func setExtraField(_ field: String) -> Builder {
 			self.extraFields.append(
-				field.stringByReplacingOccurrencesOfString(" ", withString: RecordingIdentification.SpaceReplacement)
+				field.replacingOccurrences(of: " ", with: RecordingIdentification.SpaceReplacement)
 			)
 			return self
 		}
 		
-		public func build() -> RecordingIdentification {
+		open func build() -> RecordingIdentification {
 			return RecordingIdentification(startDate: startDate, hospitalAdministrationCode: hospitalAdministrationCode, responsibleParty: responsibleParty, usedEquipment: usedEquipment, extraFields: extraFields)
 		}
 	}
@@ -63,7 +63,7 @@ public struct RecordingIdentification {
 	let usedEquipment: String?
 	let extraFields: [String]
 	
-	private init(startDate: Date?, hospitalAdministrationCode: String?, responsibleParty: String?, usedEquipment: String?, extraFields: [String] = []) {
+	fileprivate init(startDate: Date?, hospitalAdministrationCode: String?, responsibleParty: String?, usedEquipment: String?, extraFields: [String] = []) {
 		self.startDate = startDate
 		self.hospitalAdministrationCode = hospitalAdministrationCode
 		self.responsibleParty = responsibleParty
@@ -100,6 +100,6 @@ public struct RecordingIdentification {
 		              ] + extraFields
 		
 		return params
-			.joinWithSeparator(RecordingIdentification.FieldSeparator)
+			.joined(separator: RecordingIdentification.FieldSeparator)
 	}
 }

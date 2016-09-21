@@ -8,23 +8,29 @@
 
 import Foundation
 
-public struct DataRecord {
-	public class Builder {
+open class DataRecord {
+	open class Builder {
 		let dataRecordDuration: Int
 		
 		public init(dataRecordDuration: Int) {
 			self.dataRecordDuration = dataRecordDuration
 		}
 		
-		public func create() -> DataRecord {
+		open func build() -> DataRecord {
 			return DataRecord(dataRecordDuration: dataRecordDuration)
 		}
 		
 	}
 	
 	let dataRecordDuration: Int
+	var signals: [Signal] = []
 	
-	private init(dataRecordDuration: Int) {
+	fileprivate init(dataRecordDuration: Int) {
 		self.dataRecordDuration = dataRecordDuration
+	}
+	
+	open func addSignal(_ signal: Signal) -> DataRecord {
+		signals.append(signal)
+		return self
 	}
 }

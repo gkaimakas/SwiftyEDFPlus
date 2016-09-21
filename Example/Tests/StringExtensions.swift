@@ -14,11 +14,11 @@ class StringExtensionsSpec: QuickSpec {
 	override func spec() {
 		describe("padding") {
 			it("should append spaces if the string is smaller than the expected size") {
-				expect("abc".padding(5)) == "abc  "
+				expect("abc".edf_padding(5)) == "abc  "
 			}
 			
 			it("should remove characters if the string is larger than the expected size") {
-				expect("abcde".padding(3)) == "abc"
+				expect("abcde".edf_padding(3)) == "abc"
 			}
 		}
 	}

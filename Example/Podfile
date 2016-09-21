@@ -1,7 +1,7 @@
 use_frameworks!
 target 'SwiftyEDFPlus_Tests' do
-  pod 'SwiftyEDFPlus', :path => '../'
-  
-  pod 'Quick', '~> 0.8'
-  pod 'Nimble', '~> 3.0'
+	pod 'SwiftyEDFPlus', :path => '../'
+	
+	pod 'Quick', :git => 'https://github.com/Quick/Quick', :branch => 'swift-3.0'
+	pod 'Nimble', :git => 'https://github.com/Quick/Nimble'
 end

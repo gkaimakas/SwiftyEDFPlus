@@ -9,7 +9,7 @@
 import Foundation
 
 public extension String {
-	func padding(expectedLength: Int, placeholder: String = " ") -> String {
-		return self.stringByPaddingToLength(expectedLength, withString: placeholder, startingAtIndex: 0)
+	func edf_padding(_ expectedLength: Int, placeholder: String = " ") -> String {
+		return self.padding(toLength: expectedLength, withPad: placeholder, startingAt: 0)
 	}
 }

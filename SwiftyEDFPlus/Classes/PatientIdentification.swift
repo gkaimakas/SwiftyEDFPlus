@@ -13,7 +13,7 @@ public struct PatientIdentification {
 	public static let OmittedField = "X"
 	public static let SpaceReplacement = "_"
 	
-	public class Builder {
+	open class Builder {
 		var code: String? = nil
 		var sex: Sex? = nil
 		var birthdate: Date? = nil
@@ -23,35 +23,35 @@ public struct PatientIdentification {
 		public init() {
 		}
 
-		public func setCode(code: String) -> Builder {
-			self.code = code.stringByReplacingOccurrencesOfString(" ", withString: PatientIdentification.SpaceReplacement)
+		open func setCode(_ code: String) -> Builder {
+			self.code = code.replacingOccurrences(of: " ", with: PatientIdentification.SpaceReplacement)
 			return self
 		}
 
-		public func setSex(sex: Sex) -> Builder {
+		open func setSex(_ sex: Sex) -> Builder {
 			self.sex = sex
 			return self
 		}
 
-		public func setBirthDate(birthdate: Date?) -> Builder {
+		open func setBirthDate(_ birthdate: Date?) -> Builder {
 			var builder = self
 			self.birthdate = birthdate
 			return self
 		}
 
-		public func setName(name: String) -> Builder {
-			self.name = name.stringByReplacingOccurrencesOfString(" ", withString: PatientIdentification.SpaceReplacement)
+		open func setName(_ name: String) -> Builder {
+			self.name = name.replacingOccurrences(of: " ", with: PatientIdentification.SpaceReplacement)
 			return self
 		}
 
-		public func setExtraField(field: String) -> Builder {
+		open func setExtraField(_ field: String) -> Builder {
 			extraFields.append(
-				field.stringByReplacingOccurrencesOfString(" ", withString: PatientIdentification.SpaceReplacement)
+				field.replacingOccurrences(of: " ", with: PatientIdentification.SpaceReplacement)
 			)
 			return self
 		}
 
-		public func build() -> PatientIdentification {
+		open func build() -> PatientIdentification {
 			return PatientIdentification(code: code, sex: sex, birthdate: birthdate, name: name)
 		}
 	}
@@ -62,7 +62,7 @@ public struct PatientIdentification {
 	let name: String?
 	let extraFields: [String]
 
-	private init(code: String?, sex: Sex?, birthdate: Date?, name: String?, extraFields: [String] = []) {
+	fileprivate init(code: String?, sex: Sex?, birthdate: Date?, name: String?, extraFields: [String] = []) {
 		self.code = code
 		self.sex = sex
 		self.birthdate = birthdate
@@ -93,7 +93,7 @@ public struct PatientIdentification {
 
 		let params = [codeString, sexString, birthdateString, nameString] + extraFields
 		return params
-			.joinWithSeparator(PatientIdentification.FieldSeparator)
+			.joined(separator: PatientIdentification.FieldSeparator)
 
 	}
 }

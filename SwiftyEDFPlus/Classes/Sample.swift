@@ -9,9 +9,15 @@
 import Foundation
 
 public struct Sample {
-	var value: Int16
+	let value: UInt16
 	
-	public init(value: Int16) {
+	public init(value: UInt16) {
 		self.value = value
+	}
+	
+	public var data: Data {
+		var value = self.value
+
+		return Data(bytes: &value, count: MemoryLayout<UInt16>.size)
 	}
 }
